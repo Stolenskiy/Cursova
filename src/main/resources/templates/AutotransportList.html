@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" media="all" href="css/mainStyle.css">
+</head>
+<body>
+<table>
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>combatAndTransportVehiclesId</th>
+        <th>number</th>
+        <th>armamentId</th>
+    </tr>
+
+    <tr th:each="autotransport : ${autotransportList}">
+        <form th:action="@{/autotransportList}" th:object="${autotransport}" method="post">
+            <td style="border-left: 2px solid #040014"><input type="number" th:value="${autotransport.id}" name="id" readonly/></td>
+
+            <td><input type="text" th:value="${autotransport.name}" name="name"/></td>
+            <td><input type="number" th:value="${autotransport.combatAndTransportVehiclesId}" name="combatAndTransportVehiclesId"/></td>
+            <td><input type="number" th:value="${autotransport.number}" name="number"/></td>
+            <td><input type="number" th:value="${autotransport.armamentId}" name="armamentId"/></td>
+            <td class="ButtonCell">
+                <button type="submit" name="action" value="save" class="BluBtn">Save</button>
+            </td>
+            <td class="ButtonCell">
+                <button type="submit" name="action" value="delete" class="RedBtn">Delete</button>
+            </td>
+        </form>
+
+    </tr>
+
+    <form th:action="@{/autotransportList}" th:object="${autotransportEntity}" method="post">
+        <tr>
+            <td style="border-left: 2px solid #040014">
+                <input type="number" th:value="${autotransportEntity.id}" name="id"/></td>
+            <td>                <input type="text" th:value="${autotransportEntity.name}" name="name"/></td>
+            <td>                <input type="number" th:value="${autotransportEntity.combatAndTransportVehiclesId}" name="combatAndTransportVehiclesId"/></td>
+            <td>                <input type="number" th:value="${autotransportEntity.number}" name="number"/></td>
+            <td>                <input type="number" th:value="${autotransportEntity.armamentId}" name="armamentId"/></td>
+            <td class="ButtonCell">
+                <button type="submit" name="action" value="add" class="BluBtn">Add</button>
+            </td>
+        <tr/>
+
+    </form>
+</table>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" media="all" href="css/mainStyle.css">
+</head>
+<body>
+<table>
+    <tr>
+        <th>id</th>
+        <th>personId</th>
+        <th>departmentСommanderId</th>
+        <th>platoonСommanderId</th>
+    </tr>
+
+    <tr th:each="rankandfile : ${rankandfileList}">
+        <form th:action="@{/rankandfileList}" th:object="${rankandfile}" method="post">
+            <td style="border-left: 2px solid #040014"><input type="number" th:value="${rankandfile.id}" name="id" readonly/></td>
+
+            <td><input type="number" th:value="${rankandfile.personId}" name="personId"/></td>
+            <td><input type="number" th:value="${rankandfile.departmentСommanderId}" name="departmentСommanderId"/></td>
+            <td><input type="number" th:value="${rankandfile.platoonСommanderId}" name="platoonСommanderId"/></td>
+            <td class="ButtonCell">
+                <button type="submit" name="action" value="save" class="BluBtn">Save</button>
+            </td>
+            <td class="ButtonCell">
+                <button type="submit" name="action" value="delete" class="RedBtn">Delete</button>
+            </td>
+        </form>
+
+    </tr>
+
+    <form th:action="@{/rankandfileList}" th:object="${rankandfileEntity}" method="post">
+        <tr>
+            <td style="border-left: 2px solid #040014">
+                <input type="number" th:value="${rankandfileEntity.id}" name="id"/></td>
+            <td>                <input type="number" th:value="${rankandfileEntity.personId}" name="personId"/></td>
+            <td>                <input type="number" th:value="${rankandfileEntity.departmentСommanderId}" name="departmentСommanderId"/></td>
+            <td>                <input type="number" th:value="${rankandfileEntity.platoonСommanderId}" name="platoonСommanderId"/></td>
+            <td class="ButtonCell">
+                <button type="submit" name="action" value="add" class="BluBtn">Add</button>
+            </td>
+        <tr/>
+
+    </form>
+</table>
+</body>
+</html>

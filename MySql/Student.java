@@ -1,0 +1,76 @@
+drop table student;
+        create table if not exists student
+        (
+        firstName varchar(15) not null,
+        secondName varchar(15) not null,
+        dateofBirth date not null,
+        male bool not null,
+        nationality varchar(45) not null,
+        maritalStatus varchar(15) not null,
+        siblings int null,
+        orphan bool not null,
+        nuberofPhone int null,
+        `e-mail` varchar(45) null,
+        university varchar(45) null,
+        `group` int null,
+        briefFormofStudies bool null,
+        specialty varchar(45) null,
+        contractman tinyint(1) null,
+        country varchar(45) null,
+        region varchar(45) null,
+        city varchar(45) null,
+        district varchar(45) null,
+        `index` int null,
+        street varchar(45) null,
+        numberofHouse int null,
+        nunberofApartment int null,
+        Color_of_eyes varchar(30),
+        starosta bool
+        );
+        INSERT INTO `student`.`student`
+        VALUES ('Valintin', 'Kozlov', '1973-06-23', 1 , 'Ukrainian', 'marriad', 3, 0 , 380969911, 'asd@mail.com', 'CHNU',
+        312, 1 , 'Software Engineering', 1 , 'Ukraine', 'Kichmanska', 'Kicman', 'Chernivchi', 5637, 'Molodogvardiuchiv', 4, 1, 'Aryan', 0 );
+        INSERT INTO `student`.`student`
+        VALUES ('Taras', 'Petroi', '1973-06-23', 1 , 'Ukrainian', 'marriad', 3, 0 , 382341625, 'asd@mail.com', 'CHNU',
+        223, 1 , 'Software Engineering', 1 , 'Ukraine', 'Kichmanska', 'Kicman', 'Chernivchi', 5637, 'Molodogvardiuchiv', 4, 2, 'Aryan', 0 );
+        INSERT INTO `student`.`student`
+        VALUES ('Dinis', 'Pison', '1970-01-09', 1 , 'Ukrainian', 'not marriad', 3, 0 , 380969923, 'asdq@mail.com', 'CHNU',
+        332, 1 , 'Software Engineering', 1 , 'Ukraine', 'Kichmanska', 'Kicman', 'Chernivchi', 5637, 'Molodogvardiuchiv', 4, 3, 'Aryan', 1 );
+        INSERT INTO `student`.`student`
+        VALUES ('Anton', 'Kolumb', '1973-06-23', 1 , 'Ukrainian', 'marriad', 3, 0 , 380969911, 'asdqw@mail.com', 'CHNU',
+        223, 1 , 'Software Engineering', 1 , 'Ukraine', 'Kichmanska', 'Kicman', 'Chernivchi', 5637, 'Molodogvardiuchiv', 4, 4, 'Aryan', 1 );
+        INSERT INTO `student`.`student`
+        VALUES ('Koliya', 'Kolumbik', '1973-06-23', 1 , 'Ukrainian', 'marriad', 3, 0 , 380969918, 'asdqwe@mail.com', 'CHNU',
+        312, 1 , 'Software Engineering', 1 , 'Ukraine', 'Kichmanska', 'Kicman', 'Chernivchi', 5637, 'Molodogvardiuchiv', 4, 5, 'Aryan', 1 );
+        INSERT INTO `student`.`student`
+        VALUES ('petro', 'Kolumbiko', '1999-11-02', 1 , 'Ukrainian', 'marriad', 3, 0 , 380969923, 'asdqwer@mail.com', 'BDFU',
+        332, 1 , 'Software Engineering', 1 , 'Ukraine', 'Kichmanska', 'Kicman', 'Chernivchi', 5637, 'Molodogvardiuchiv', 4, 6, 'Aryan', 0 );
+        INSERT INTO `student`.`student`
+        VALUES ('Ivan', 'Kolumbikok', '1973-06-23', 1 , 'Ukrainian', 'not marriad', 3, 0 , 380969321, 'asdqwert@mail.com', 'CHNU',
+        223, 1 , 'Software Engineering', 1 , 'Ukraine', 'Kichmanska', 'Kicman', 'Chernivchi', 5637, 'Molodogvardiuchiv', 4, 7, 'Aryan', 0 );
+        INSERT INTO `student`.`student`
+        VALUES ('Danilo', 'Poroshenko', '1970-01-09', 1 , 'Ukrainian', 'marriad', 3, 0 , 380969321, 'asdqwertq@mail.com', 'CHNU',
+        223, 1 , 'Software Engineering', 1 , 'Ukraine', 'Kichmanska', 'Kicman', 'Chernivchi', 5637, 'Molodogvardiuchiv', 4, 8, 'Aryan', 0 );
+        INSERT INTO `student`.`student`
+        VALUES ('Kostiay', 'Timoshenko', '1970-01-09', 1 , 'Ukrainian', 'marriad', 3, 0 , 382341525, 'asdqwertqqw@mail.com', 'CHNU',
+        332, 1 , 'Software Engineering', 1 , 'Ukraine', 'Kichmanska', 'Kicman', 'Chernivchi', 5637, 'Molodogvardiuchiv', 4, 9, 'Aryan', 0 );
+        INSERT INTO `student`.`student`
+        VALUES ('Pavlo', 'Timoshen', '1973-06-23', 1 , 'Ukrainian', 'marriad', 3, 0 , 3823415, 'asdqwertqqww@mail.com', 'BDFU',
+        312, 1 , 'Software Engineering', 1 , 'Ukraine', 'Kichmanska', 'Kicman', 'Chernivchi', 5637, 'Molodogvardiuchiv', 4, 10, 'Aryan', 0 );
+        INSERT INTO `student`.`student`
+        VALUES ('Vasil', 'Timo', '1999-11-02', 1 , 'Ukrainian', 'not marriad', 3, 0 , 382341565, 'asdqwertqqwwe@mail.com', 'BDFU',
+        223, 1 , 'Software Engineering', 1 , 'Ukraine', 'Kichmanska', 'Kicman', 'Chernivchi', 5637, 'Molodogvardiuchiv', 4, 11, 'Aryan', 0 );
+        INSERT INTO `student`.`student`
+        VALUES ('Anton', 'Timok', '1970-01-09', 1 , 'Ukrainian', 'marriad', 3, 0 , 380969923, 'asdqwertqqwwer@mail.com', 'CHNU',
+        332, 1 , 'Software Engineering', 1 , 'Ukraine', 'Kichmanska', 'Kicman', 'Chernivchi', 5637, 'Molodogvardiuchiv', 4, 12, 'Aryan', 0 );
+        INSERT INTO `student`.`student`
+        VALUES ('Eduard', 'Timokol', '1973-06-23', 1 , 'Ukrainian', 'marriad', 3, 0 , 382341475, 'asdqwertqqwwers@mail.com', 'CHNU',
+        312, 1 , 'Software Engineering', 1 , 'Ukraine', 'Kichmanska', 'Kicman', 'Chernivchi', 5637, 'Molodogvardiuchiv', 4, 13, 'Aryan', 0 );
+        INSERT INTO `student`.`student`
+        VALUES ('Andriy', 'Timokolus', '1999-11-02', 1 , 'Ukrainian', 'not marriad', 3, 0 , 382341875, 'asdqwertqqwwersa@mail.com', 'BDFU',
+        332, 1 , 'Software Engineering', 1 , 'Ukraine', 'Kichmanska', 'Kicman', 'Chernivchi', 5637, 'Molodogvardiuchiv', 4, 14, 'Aryan', 0 );
+        INSERT INTO `student`.`student`
+        VALUES ('Sergiy', 'Timokoluser', '1973-06-23', 1 , 'Ukrainian', 'not marriad', 3, 0 , 382341625, 'asdqwertqqwwersaq@mail.com', 'CHIK',
+        332, 1 , 'Software Engineering', 1 , 'Ukraine', 'Kichmanska', 'Kicman', 'Chernivchi', 5637, 'Molodogvardiuchiv', 4, 15, 'Aryan', 0 );
+
+

@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.url">jdbc:mysql://localhost:3306/cursova</property>
+    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+      <mapping class="ua.nic.Cursova.model.ArmamentEntity"/>
+    <mapping class="ua.nic.Cursova.model.ArmyEntity"/>
+    <mapping class="ua.nic.Cursova.model.ArtilleryEntity"/>
+    <mapping class="ua.nic.Cursova.model.AutomxaticweaponEntity"/>
+    <mapping class="ua.nic.Cursova.model.AutotransportEntity"/>
+    <mapping class="ua.nic.Cursova.model.BalisticmissileEntity"/>
+    <mapping class="ua.nic.Cursova.model.BmpEntity"/>
+    <mapping class="ua.nic.Cursova.model.BrigadeEntity"/>
+    <mapping class="ua.nic.Cursova.model.BuildingEntity"/>
+    <mapping class="ua.nic.Cursova.model.CaptainEntity"/>
+    <mapping class="ua.nic.Cursova.model.CarbineEntity"/>
+    <mapping class="ua.nic.Cursova.model.ColonelEntity"/>
+    <mapping class="ua.nic.Cursova.model.CombatAndTransportVehiclesEntity"/>
+    <mapping class="ua.nic.Cursova.model.CompositionofficersEntity"/>
+    <mapping class="ua.nic.Cursova.model.DepartmentEntity"/>
+    <mapping class="ua.nic.Cursova.model.DivisionEntity"/>
+    <mapping class="ua.nic.Cursova.model.EnsignEntity"/>
+    <mapping class="ua.nic.Cursova.model.GeneralEntity"/>
+    <mapping class="ua.nic.Cursova.model.LieutenantEntity"/>
+    <mapping class="ua.nic.Cursova.model.LocationEntity"/>
+    <mapping class="ua.nic.Cursova.model.MajorEntity"/>
+    <mapping class="ua.nic.Cursova.model.MilitarybaseEntity"/>
+    <mapping class="ua.nic.Cursova.model.MilitaryspecialtyEntity"/>
+    <mapping class="ua.nic.Cursova.model.OrdinaryEntity"/>
+    <mapping class="ua.nic.Cursova.model.PersonEntity"/>
+    <mapping class="ua.nic.Cursova.model.PettyofficerEntity"/>
+    <mapping class="ua.nic.Cursova.model.PettyofficercolonelEntity"/>
+    <mapping class="ua.nic.Cursova.model.PlatoonEntity"/>
+    <mapping class="ua.nic.Cursova.model.RankandfileEntity"/>
+    <mapping class="ua.nic.Cursova.model.RocketweaponsEntity"/>
+    <mapping class="ua.nic.Cursova.model.RotaEntity"/>
+    <mapping class="ua.nic.Cursova.model.SergeantEntity"/>
+    <mapping class="ua.nic.Cursova.model.TractorEntity"/>
+    <mapping class="ua.nic.Cursova.model.YefreytorEntity"/>
+    <mapping class="ua.nic.Cursova.mapa"/>
+
+    <!-- DB schema will be updated if needed -->
+    <!-- <property name="hbm2ddl.auto">update</property> -->
+  </session-factory>
+</hibernate-configuration>

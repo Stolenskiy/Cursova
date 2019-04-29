@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" media="all" href="css/mainStyle.css">
+</head>
+<body>
+<table>
+    <tr>
+        <th>id</th>
+        <th>name</th>
+    </tr>
+
+    <tr th:each="armament : ${armamentList}">
+        <form th:action="@{/armamentList}" th:object="${armament}" method="post">
+            <td style="border-left: 2px solid #040014"><input type="number" th:value="${armament.id}" name="id" readonly/></td>
+
+            <td><input type="text" th:value="${armament.name}" name="name"/></td>
+            <td class="ButtonCell">
+                <button type="submit" name="action" value="save" class="BluBtn">Save</button>
+            </td>
+            <td class="ButtonCell">
+                <button type="submit" name="action" value="delete" class="RedBtn">Delete</button>
+            </td>
+        </form>
+
+    </tr>
+
+    <form th:action="@{/armamentList}" th:object="${armamentEntity}" method="post">
+        <tr>
+            <td style="border-left: 2px solid #040014">
+                <input type="number" th:value="${armamentEntity.id}" name="id"/></td>
+            <td>                <input type="text" th:value="${armamentEntity.name}" name="name"/></td>
+            <td class="ButtonCell">
+                <button type="submit" name="action" value="add" class="BluBtn">Add</button>
+            </td>
+        <tr/>
+
+    </form>
+</table>
+</body>
+</html>

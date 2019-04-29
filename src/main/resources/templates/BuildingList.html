@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" media="all" href="css/mainStyle.css">
+</head>
+<body>
+<table>
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>militaryBaseId</th>
+        <th>number</th>
+    </tr>
+
+    <tr th:each="building : ${buildingList}">
+        <form th:action="@{/buildingList}" th:object="${building}" method="post">
+            <td style="border-left: 2px solid #040014"><input type="number" th:value="${building.id}" name="id" readonly/></td>
+
+            <td><input type="text" th:value="${building.name}" name="name"/></td>
+            <td><input type="number" th:value="${building.militaryBaseId}" name="militaryBaseId"/></td>
+            <td><input type="number" th:value="${building.number}" name="number"/></td>
+            <td class="ButtonCell">
+                <button type="submit" name="action" value="save" class="BluBtn">Save</button>
+            </td>
+            <td class="ButtonCell">
+                <button type="submit" name="action" value="delete" class="RedBtn">Delete</button>
+            </td>
+        </form>
+
+    </tr>
+
+    <form th:action="@{/buildingList}" th:object="${buildingEntity}" method="post">
+        <tr>
+            <td style="border-left: 2px solid #040014">
+                <input type="number" th:value="${buildingEntity.id}" name="id"/></td>
+            <td>                <input type="text" th:value="${buildingEntity.name}" name="name"/></td>
+            <td>                <input type="number" th:value="${buildingEntity.militaryBaseId}" name="militaryBaseId"/></td>
+            <td>                <input type="number" th:value="${buildingEntity.number}" name="number"/></td>
+            <td class="ButtonCell">
+                <button type="submit" name="action" value="add" class="BluBtn">Add</button>
+            </td>
+        <tr/>
+
+    </form>
+</table>
+</body>
+</html>
