@@ -7,4 +7,4 @@ import ua.nic.Cursova.model.CaptainEntity;
     Для того, щоб забезпечити взаємодію із БД,
     потрібно створити репозиторій для кожної сущності
 */
-public interface ICaptainRepository extends JpaRepository<CaptainEntity, Long> {} 
+public interface ICaptainRepository extends JpaRepository<CaptainEntity, Long> {}

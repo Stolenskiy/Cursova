@@ -3,6 +3,7 @@ table {
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
 }
+
 th {
     padding: 10px 20px;
     background: #040014;
@@ -10,76 +11,99 @@ th {
     border-right: 2px solid;
     font-size: 0.9em;
 }
+
 th:last-child {
     border-right: none;
 }
+
 td {
     vertical-align: middle;
-    padding: 10px;
+    padding: 10px 20px;
     font-size: 14px;
     text-align: center;
     border-top: 2px solid #040014;
     border-bottom: 2px solid #040014;
     border-right: 2px solid #040014;
 }
-.ButtonCell{
+
+
+.ButtonCell {
     border: none;
 }
 
-button{
-    text-align:center;
-    display:block;
+button {
+    text-align: center;
+    display: block;
+    width: 80px;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     font-size: 0.9em;
     text-decoration: none;
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(0, 0, 0, 0);
     padding: 10px 20px;
     transition: .5s;
     border-radius: 0px;
 }
+
 button:hover {
     top: 5px;
     transition: .5s;
     border-radius: 10px;
 }
+
 button:active {
     color: #000;
     border: #1A1A1A 1px solid;
     transition: .07s;
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(0, 0, 0, 0);
 }
+
 button:focus {
     outline: none;
 }
-.BluBtn{
+
+.BluBtn {
     border: #1071FF 1px solid;
     color: #1071FF;
     margin-left: -5px;
 }
-.BluBtn:hover{
+
+.BluBtn:hover {
     color: #35ceff;
     border: #35ceff 1px solid;
 }
+
 .BluBtn:active {
     color: #66ffda;
     border: #66ffda 1px solid;
     transition: .07s;
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(0, 0, 0, 0);
 }
-.RedBtn{
+
+.RedBtn {
     border: #ff0000 1px solid;
     color: #ff0000;
     margin-left: -15px;
 
 }
-.RedBtn:hover{
+
+.RedBtn:hover {
     color: #ffa331;
     border: #ffa331 1px solid;
 }
+
 .RedBtn:active {
     color: #ffcd42;
     border: #ffcd42 1px solid;
     transition: .07s;
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+input {
+    width: 100%;
+    padding: 5px;
+    margin: -5px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
