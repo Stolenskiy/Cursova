@@ -25,7 +25,7 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="a8f47ebc-c92a-45d9-8b68-cea71d3383cb">
-        <schema name="cursova" object-types="table" />
+        <schema name="cursova" object-types="table, column" />
       </connection>
     </loaded-nodes>
   </component>
