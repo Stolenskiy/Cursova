@@ -33,13 +33,13 @@ td {
 
 button {
     text-align: center;
+    background: #040014;
     display: block;
     width: 80px;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     font-size: 0.9em;
     text-decoration: none;
-    background-color: rgba(0, 0, 0, 0);
     padding: 10px 20px;
     transition: .5s;
     border-radius: 0px;
@@ -55,7 +55,6 @@ button:active {
     color: #000;
     border: #1A1A1A 1px solid;
     transition: .07s;
-    background-color: rgba(0, 0, 0, 0);
 }
 
 button:focus {
@@ -77,13 +76,12 @@ button:focus {
     color: #66ffda;
     border: #66ffda 1px solid;
     transition: .07s;
-    background-color: rgba(0, 0, 0, 0);
 }
 
 .RedBtn {
     border: #ff0000 1px solid;
     color: #ff0000;
-    margin-left: -15px;
+    margin-left: -25px;
 
 }
 
@@ -96,9 +94,10 @@ button:focus {
     color: #ffcd42;
     border: #ffcd42 1px solid;
     transition: .07s;
-    background-color: rgba(0, 0, 0, 0);
 }
-
+.LastBtn{
+    width: 233%;
+}
 input {
     width: 100%;
     padding: 5px;
