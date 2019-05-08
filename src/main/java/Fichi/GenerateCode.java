@@ -384,7 +384,7 @@ public class GenerateCode {
                         + tableFields.split("\n")[i] + "\"/></td>\n";
             }
             controller += "            <td class=\"ButtonCell\">\n" +
-                    "                <button type=\"submit\" name=\"action\" value=\"add\" class=\"BluBtn\">Add</button>\n" +
+                    "                <button type=\"submit\" name=\"action\" value=\"add\" class=\"BluBtn LastBtn\">Add</button>\n" +
                     "            </td>\n" +
                     "        <tr/>\n" +
                     "\n" +
@@ -526,7 +526,6 @@ public class GenerateCode {
 //        generateRestController(tables);
 //        generateViewController(tables);
 //        generateViewHtml(tables);
-        System.out.println(PersonEntity.class.getDeclaredFields()[5].getType().getName().toLowerCase());
 
         generateHelpCode(tables);
         generateViewHtml(tables);
