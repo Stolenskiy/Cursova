@@ -1,14 +1,17 @@
 package Fichi;
 
-import ua.nic.Cursova.model.CaptainEntity;
-import ua.nic.Cursova.model.CombatAndTransportVehiclesEntity;
-import ua.nic.Cursova.model.PersonEntity;
-
-import java.io.*;
-import java.lang.reflect.Field;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.List;
 
 public class GenerateCode {
+
+    private static final String repositoryDir = "D:\\Programing\\Java\\Practica\\src\\main\\java\\ua\\nic\\Practica\\repository";
+    private static final String serviceDir = "D:\\Programing\\Java\\Practica\\src\\main\\java\\ua\\nic\\Practica\\service";
+    private static final String restControllerDir = "D:\\Programing\\Java\\Practica\\src\\main\\java\\ua\\nic\\Practica\\controller";
+    private static final String viewControllerDir = "D:\\Programing\\Java\\Cursova\\src\\main\\java\\ua\\nic\\Cursova\\view\\controller";
+
     public static String dontHaveSpace (String mysql) {
         //`graduation date of the General Academy` date null,
         String returnSQL = "";
@@ -35,7 +38,7 @@ public class GenerateCode {
             String repository = "";
             tName = tName.replaceAll("^.", String.valueOf(tName.toUpperCase().toCharArray()[0]));
             FileWriter fileWriter;
-            String dir = "D:\\Programing\\Java\\Cursova\\src\\main\\java\\ua\\nic\\Cursova\\repository";
+            String dir = repositoryDir;
             File file = new File(dir, "I" + tName + "Repository.java");
 
             try {
@@ -68,7 +71,7 @@ public class GenerateCode {
             String lowerTName = tName;
             tName = tName.replaceAll("^.", String.valueOf(tName.toUpperCase().toCharArray()[0]));
             FileWriter fileWriter;
-            String dir = "D:\\Programing\\Java\\Cursova\\src\\main\\java\\ua\\nic\\Cursova\\service";
+            String dir = serviceDir;
             File file = new File(dir, tName + "Service.java");
 
             try {
@@ -102,7 +105,7 @@ public class GenerateCode {
                         "    }\n" +
                         "\n" +
                         "    @Override\n" +
-                        "    public void save(Object " + lowerTName + ") {\n" +
+                        "    public void add(Object " + lowerTName + ") {\n" +
                         "        log.info(\"In " + tName + "Service save{}\" + " + lowerTName + ");\n" +
                         "\n" +
                         "        " + lowerTName + "Repository.save((" + tName + "Entity) " + lowerTName + ");\n" +
@@ -136,7 +139,7 @@ public class GenerateCode {
             String lowerTName = tName;
             tName = tName.replaceAll("^.", String.valueOf(tName.toUpperCase().toCharArray()[0]));
             FileWriter fileWriter;
-            String dir = "D:\\Programing\\Java\\Cursova\\src\\main\\java\\ua\\nic\\Cursova\\rest\\controller";
+            String dir = restControllerDir;
             File file = new File(dir, tName + "RestController.java");
 
             try {
@@ -178,13 +181,13 @@ public class GenerateCode {
                         "    }\n" +
                         "\n" +
                         "    @RequestMapping(value = \"\", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)\n" +
-                        "    public ResponseEntity<" + tName + "Entity> save" + tName + "(@RequestBody @Valid " + tName + "Entity " + lowerTName + ") {\n" +
+                        "    public ResponseEntity<" + tName + "Entity> add" + tName + "(@RequestBody @Valid " + tName + "Entity " + lowerTName + ") {\n" +
                         "        HttpHeaders httpHeaders = new HttpHeaders();\n" +
-                        "        System.out.println(\"save\");\n" +
+                        "        System.out.println(\"add\");\n" +
                         "        if (" + lowerTName + " == null)\n" +
                         "            return new ResponseEntity(HttpStatus.BAD_REQUEST);\n" +
                         "\n" +
-                        "        this." + lowerTName + "Service.save(" + lowerTName + ");\n" +
+                        "        this." + lowerTName + "Service.add(" + lowerTName + ");\n" +
                         "\n" +
                         "        return new ResponseEntity(" + lowerTName + ", httpHeaders, HttpStatus.CREATED);\n" +
                         "    }\n" +
@@ -196,7 +199,7 @@ public class GenerateCode {
                         "        if (" + lowerTName + " == null)\n" +
                         "            return new ResponseEntity(HttpStatus.BAD_REQUEST);\n" +
                         "        this." + lowerTName + "Service.delete(" + lowerTName + "Id);\n" +
-                        "        this." + lowerTName + "Service.save(" + lowerTName + ");\n" +
+                        "        this." + lowerTName + "Service.add(" + lowerTName + ");\n" +
                         "\n" +
                         "        return new ResponseEntity(" + lowerTName + ", httpHeaders, HttpStatus.OK);\n" +
                         "    }\n" +
@@ -240,7 +243,7 @@ public class GenerateCode {
             String lowerTName = tName;
             tName = tName.replaceAll("^.", String.valueOf(tName.toUpperCase().toCharArray()[0]));
             FileWriter fileWriter;
-            String dir = "D:\\Programing\\Java\\Cursova\\src\\main\\java\\ua\\nic\\Cursova\\view\\controller";
+            String dir = viewControllerDir;
             File file = new File(dir, tName + "ViewController.java");
 
             try {
@@ -485,50 +488,20 @@ public class GenerateCode {
             createHtml(tablesName.split("\n")[i], fields.get(i)[0], fields.get(i)[1]);
         }
     }
-    
+
     public static void main (String[] args) {
-        String tables = "armament\n" +
-                "army\n" +
-                "artillery\n" +
-                "automxaticweapon\n" +
-                "autotransport\n" +
-                "balisticmissile\n" +
-                "bmp\n" +
-                "brigade\n" +
-                "building\n" +
-                "captain\n" +
-                "carbine\n" +
-                "colonel\n" +
-                "combatAndTransportVehicles\n" +
-                "compositionofficers\n" +
-                "department\n" +
-                "division\n" +
-                "ensign\n" +
-                "general\n" +
-                "lieutenant\n" +
-                "location\n" +
-                "major\n" +
-                "militarybase\n" +
-                "militaryspecialty\n" +
-                "ordinary\n" +
-                "person\n" +
-                "pettyofficer\n" +
-                "pettyofficercolonel\n" +
-                "platoon\n" +
-                "rankandfile\n" +
-                "rocketweapons\n" +
-                "rota\n" +
-                "sergeant\n" +
-                "tractor\n" +
-                "yefreytor";
-//        generateRepository(tables);
-//        generateService(tables);
-//        generateRestController(tables);
+        String tables = "located\n" +
+                "tradingFloor\n" +
+                "image\n" +
+                "images";
+        generateRepository(tables);
+        generateService(tables);
+        generateRestController(tables);
 //        generateViewController(tables);
 //        generateViewHtml(tables);
 
-        generateHelpCode(tables);
-        generateViewHtml(tables);
+//        generateHelpCode(tables);
+//        generateViewHtml(tables);
 
 
 
